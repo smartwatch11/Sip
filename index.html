@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sip — Support &amp; Privacy Policy</title>
+<meta name="description" content="Support, Privacy Policy, Terms of Use and FAQ for Sip, a minimalist water tracker for iPhone and Apple Watch.">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%A7%3C/text%3E%3C/svg%3E">
+<style>
+:root {
+  --ink:#060D14; --ink2:#091623; --deep:#0B2A3F; --surf:#46B8DA; --tint:#9CC3D4;
+  --text:#F4F8FB; --muted:#8FA9B8; --card:rgba(12,22,31,.78); --rim:#2C3D4A; --rim-hi:#7E97A9;
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI","Helvetica Neue",Arial,sans-serif;
+}
+* { box-sizing:border-box; }
+html { color-scheme:dark; background:var(--ink); scroll-behavior:smooth; scroll-padding-top:16px; }
+body { margin:0; min-height:100vh; font-family:var(--font); color:var(--text); line-height:1.65; -webkit-font-smoothing:antialiased;
+  background:linear-gradient(180deg,var(--ink) 0%,var(--ink2) 60%,#07202F 100%); background-attachment:fixed;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }
+.water { position:fixed; left:0; right:0; bottom:0; height:34vh; min-height:180px; overflow:hidden; pointer-events:none; z-index:0; }
+.water svg { position:absolute; left:0; bottom:0; width:200%; height:100%; animation:drift 26s linear infinite; }
+.water svg.b { animation-duration:38s; animation-direction:reverse; }
+@keyframes drift { to { transform:translateX(-50%); } }
+@media (prefers-reduced-motion:reduce) { .water svg { animation:none; } html { scroll-behavior:auto; } }
+main { position:relative; z-index:1; max-width:760px; margin:0 auto; padding:28px 20px 160px; }
+header { text-align:center; padding:44px 0 26px; }
+.logo { width:84px; height:84px; margin:0 auto 22px; border-radius:26px; background:#141C24; border:2px solid var(--rim-hi);
+  display:grid; place-items:center; box-shadow:0 18px 50px rgba(0,0,0,.6); }
+.logo svg { width:40px; height:40px; }
+h1 { margin:0; font-size:clamp(46px,9vw,72px); line-height:1; letter-spacing:-.03em; font-weight:700; }
+.tag { margin:12px 0 0; color:var(--tint); font-size:clamp(17px,3vw,21px); }
+.switch { display:inline-flex; margin-top:26px; padding:4px; border:1px solid var(--rim); border-radius:999px; background:var(--card); }
+.switch button { font:inherit; font-size:14px; font-weight:600; color:var(--muted); background:none; border:0; border-radius:999px; padding:7px 18px; cursor:pointer; }
+html[data-lang="en"] .switch [data-set="en"], html[data-lang="ru"] .switch [data-set="ru"] { background:var(--deep); color:var(--text); }
+.switch button:focus-visible, a:focus-visible, summary:focus-visible { outline:2px solid var(--surf); outline-offset:2px; }
+.lang { display:none; }
+html[data-lang="en"] .lang[data-l="en"], html[data-lang="ru"] .lang[data-l="ru"] { display:block; }
+.chips { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin:0 0 22px; }
+.chips a { font-size:14px; font-weight:600; color:var(--tint); border:1px solid var(--rim); border-radius:999px; padding:6px 14px; background:var(--card); }
+.chips a:hover { border-color:var(--rim-hi); }
+.card { background:var(--card); border:1px solid var(--rim); border-radius:22px; padding:22px 24px; margin:0 0 14px;
+  -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); }
+h2 { margin:0 0 8px; font-size:26px; letter-spacing:-.02em; }
+h2.pp { margin:42px 4px 4px; font-size:30px; }
+h3 { margin:0 0 8px; font-size:18px; letter-spacing:-.01em; color:var(--tint); }
+p { margin:0 0 10px; color:#C9D8E1; }
+p:last-child { margin-bottom:0; }
+ul { margin:0 0 10px; padding-left:20px; color:#C9D8E1; }
+li { margin:4px 0; }
+.upd { margin:0 4px 18px; color:var(--muted); font-size:14px; }
+.summary { background:linear-gradient(135deg,rgba(11,42,63,.85),rgba(12,22,31,.8)); border:1px solid var(--rim-hi); border-radius:22px; padding:18px 24px; margin:0 0 14px; color:var(--text); }
+.mail { display:flex; flex-wrap:wrap; gap:6px 14px; align-items:center; margin-top:14px; }
+.mail span { color:var(--muted); font-size:14px; }
+details.faq { padding:0; }
+details.faq summary { list-style:none; cursor:pointer; padding:18px 24px; font-weight:600; font-size:17px; display:flex; justify-content:space-between; gap:16px; align-items:center; }
+details.faq summary::-webkit-details-marker { display:none; }
+details.faq summary::after { content:""; flex:none; width:9px; height:9px; border-right:2px solid var(--tint); border-bottom:2px solid var(--tint); transform:rotate(45deg); transition:transform .2s; margin-top:-4px; }
+details.faq[open] summary::after { transform:rotate(-135deg); margin-top:4px; }
+details.faq > div { padding:0 24px 20px; }
+a { color:var(--surf); text-decoration:none; border-bottom:1px solid rgba(70,184,218,.35); }
+.chips a { border-bottom:1px solid var(--rim); }
+a:hover { border-bottom-color:var(--surf); }
+footer { text-align:center; color:var(--muted); font-size:13px; margin-top:34px; }
+</style>
+</head>
+<body>
+<div class="water" aria-hidden="true">
+  <svg class="b" viewBox="0 0 1200 200" preserveAspectRatio="none"><path d="M0,104.4 L20,105.7 L40,106.0 L60,105.3 L80,103.7 L100,101.4 L120,98.5 L140,95.4 L160,92.4 L180,89.7 L200,87.6 L220,86.3 L240,86.0 L260,86.7 L280,88.3 L300,90.6 L320,93.5 L340,96.6 L360,99.6 L380,102.3 L400,104.4 L420,105.7 L440,106.0 L460,105.3 L480,103.7 L500,101.4 L520,98.5 L540,95.4 L560,92.4 L580,89.7 L600,87.6 L620,86.3 L640,86.0 L660,86.7 L680,88.3 L700,90.6 L720,93.5 L740,96.6 L760,99.6 L780,102.3 L800,104.4 L820,105.7 L840,106.0 L860,105.3 L880,103.7 L900,101.4 L920,98.5 L940,95.4 L960,92.4 L980,89.7 L1000,87.6 L1020,86.3 L1040,86.0 L1060,86.7 L1080,88.3 L1100,90.6 L1120,93.5 L1140,96.6 L1160,99.6 L1180,102.3 L1200,104.4 L1200,200 L0,200 Z" fill="#0A2433" fill-opacity=".9"/></svg>
+  <svg viewBox="0 0 1200 200" preserveAspectRatio="none"><path d="M0,80.0 L20,82.9 L40,85.7 L60,88.2 L80,90.4 L100,92.1 L120,93.3 L140,93.9 L160,93.9 L180,93.3 L200,92.1 L220,90.4 L240,88.2 L260,85.7 L280,82.9 L300,80.0 L320,77.1 L340,74.3 L360,71.8 L380,69.6 L400,67.9 L420,66.7 L440,66.1 L460,66.1 L480,66.7 L500,67.9 L520,69.6 L540,71.8 L560,74.3 L580,77.1 L600,80.0 L620,82.9 L640,85.7 L660,88.2 L680,90.4 L700,92.1 L720,93.3 L740,93.9 L760,93.9 L780,93.3 L800,92.1 L820,90.4 L840,88.2 L860,85.7 L880,82.9 L900,80.0 L920,77.1 L940,74.3 L960,71.8 L980,69.6 L1000,67.9 L1020,66.7 L1040,66.1 L1060,66.1 L1080,66.7 L1100,67.9 L1120,69.6 L1140,71.8 L1160,74.3 L1180,77.1 L1200,80.0 L1200,200 L0,200 Z" fill="#0B2A3F" fill-opacity=".92"/><path d="M0,80.0 L20,82.9 L40,85.7 L60,88.2 L80,90.4 L100,92.1 L120,93.3 L140,93.9 L160,93.9 L180,93.3 L200,92.1 L220,90.4 L240,88.2 L260,85.7 L280,82.9 L300,80.0 L320,77.1 L340,74.3 L360,71.8 L380,69.6 L400,67.9 L420,66.7 L440,66.1 L460,66.1 L480,66.7 L500,67.9 L520,69.6 L540,71.8 L560,74.3 L580,77.1 L600,80.0 L620,82.9 L640,85.7 L660,88.2 L680,90.4 L700,92.1 L720,93.3 L740,93.9 L760,93.9 L780,93.3 L800,92.1 L820,90.4 L840,88.2 L860,85.7 L880,82.9 L900,80.0 L920,77.1 L940,74.3 L960,71.8 L980,69.6 L1000,67.9 L1020,66.7 L1040,66.1 L1060,66.1 L1080,66.7 L1100,67.9 L1120,69.6 L1140,71.8 L1160,74.3 L1180,77.1 L1200,80.0" fill="none" stroke="#46B8DA" stroke-opacity=".5" stroke-width="2" vector-effect="non-scaling-stroke"/></svg>
+</div>
+<main>
+<header>
+  <div class="logo" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M20 4C20 4 8 18 8 25a12 12 0 0 0 24 0C32 18 20 4 20 4Z" fill="none" stroke="#46B8DA" stroke-width="2.6" stroke-linejoin="round"/><path d="M13 26c3-2 5 2 7 0s4-2 7 0" fill="none" stroke="#9CC3D4" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+  <h1>Sip</h1>
+  <p class="tag" data-t="en">Minimalist water tracker</p><p class="tag" data-t="ru" hidden>Минималистичный трекер воды</p>
+  <div class="switch" role="group" aria-label="Language"><button type="button" data-set="en">English</button><button type="button" data-set="ru">Русский</button></div>
+</header>
+<div class="lang" data-l="en">
+  <nav class="chips"><a href="#support-en">Support</a><a href="#privacy-en">Privacy</a><a href="#terms-en">Terms</a><a href="#faq-en">FAQ</a></nav>
+  <section class="card" id="support-en"><h2>Support</h2><p>Questions, bug reports or ideas for Sip? Write to us — we usually reply within 24–48 hours.</p>
+    <p class="mail"><span>Email</span><a href="mailto:egrybin46@gmail.com">egrybin46@gmail.com</a></p></section>
+  <h2 class="pp" id="privacy-en">Privacy Policy</h2>
+  <p class="upd">Last updated: 15.10.2026</p>
+  <p class="summary"><strong>In short:</strong> Sip does not collect, sell or share your personal data. Everything you enter stays on your device and, if you choose, in Apple Health.</p>
+  <section class="card"><h3>Data stored on your device</h3><p>To work, Sip keeps the following data locally on your iPhone and Apple Watch:</p><ul><li>your water intake log and daily statistics;</li><li>your daily goal and app settings;</li><li>information you enter during onboarding to calculate your goal, such as your weight.</li></ul><p>This data is stored with Apple’s on-device storage and is never sent to our servers. We have no access to it.</p></section>
+<section class="card"><h3>Apple Health</h3><p>Sip integrates with Apple Health. Access is optional and is requested only through Apple’s standard permission screen. If you allow it, Sip can read from and write to Apple Health the data types you explicitly permit, such as your water intake.</p><ul><li>Health data is used only to provide Sip’s features;</li><li>it is not used for advertising, marketing or data mining, and is never sold or shared with third parties;</li><li>it is not sent to or stored on our servers.</li></ul><p>You can change or revoke access at any time in the Health app (profile picture → Apps → Sip) or in iOS Settings → Health → Data Access &amp; Devices.</p></section>
+<section class="card"><h3>iPhone, Apple Watch and widgets</h3><p>Data is synchronised between your iPhone and Apple Watch directly by the system, and shared with widgets and complications on the same device. It does not pass through any server of ours.</p></section>
+<section class="card"><h3>Notifications</h3><p>Reminders are scheduled locally on your device. You can turn them off at any time in the app or in iOS Settings.</p></section>
+<section class="card"><h3>Ratings</h3><p>Sip may occasionally ask you to rate the app using Apple’s standard system prompt. Apple handles your response; we do not receive any personal information from it.</p></section>
+<section class="card"><h3>Third parties</h3><p>Sip does not contain advertising, analytics or tracking tools, and does not share data with third parties. If you have chosen to share app analytics with developers in your iOS settings, Apple may provide us with aggregated, anonymous statistics. This is controlled by Apple and does not identify you.</p></section>
+<section class="card"><h3>Retention and deletion</h3><p>Your data remains on your device until you delete it. Deleting the app removes its data from the device. Data saved to Apple Health stays there until you delete it in the Health app. If you use iCloud Backup, a copy of the app’s data may be included in your backup, which is managed by Apple and your iCloud settings.</p></section>
+<section class="card"><h3>Children’s privacy</h3><p>Sip does not knowingly collect personal information from anyone, including children.</p></section>
+<section class="card"><h3>Changes to this policy</h3><p>We may update this policy from time to time. The latest version is always available on this page, with the date of the last update shown above.</p></section>
+<section class="card"><h3>Contact us</h3><p>If you have any questions about this Privacy Policy, write to <a href="mailto:egrybin46@gmail.com">egrybin46@gmail.com</a>.</p></section>
+  <h2 class="pp" id="terms-en">Terms of Use</h2>
+  <p class="upd">Last updated: 15.10.2026</p>
+  <section class="card"><h3>Use of the app</h3><p>Sip is provided for your personal, non-commercial use. You may not use it for commercial purposes or for anything unlawful. Use of the app is also subject to Apple’s Licensed Application End User License Agreement (Standard EULA).</p></section>
+<section class="card"><h3>Not medical advice</h3><p>Sip is a hydration-tracking tool, not a medical device. Daily goals are general estimates based on the information you provide and are not medical advice. Please consult a qualified professional about your health, diet or hydration needs.</p></section>
+<section class="card"><h3>Intellectual property</h3><p>All content of the app, including its design, graphics, animations, code and mechanics, is the intellectual property of the developer.</p></section>
+<section class="card"><h3>Limitation of liability</h3><p>The app is provided “as is” without warranties of any kind. We are not responsible for any issues with your device or data resulting from the use of the app.</p></section>
+<section class="card"><h3>User conduct</h3><p>You agree not to do anything that could damage, disable or impair the app or its functionality.</p></section>
+<section class="card"><h3>Changes to terms</h3><p>We may modify these terms at any time. Continued use of the app means you accept the updated terms.</p></section>
+  <h2 class="pp" id="faq-en">Frequently Asked Questions</h2>
+  <details class="card faq"><summary>What is Sip?</summary><div><p>Sip is a minimalist water tracker for iPhone and Apple Watch. Log a drink in a moment and see your progress through the day.</p></div></details>
+<details class="card faq"><summary>How is my daily goal calculated?</summary><div><p>During onboarding Sip asks for your weight and uses it to calculate a suggested daily water goal. It is a general estimate, not medical advice.</p></div></details>
+<details class="card faq"><summary>Does Sip need an internet connection?</summary><div><p>No. Your data is stored on your device, so Sip works fully offline.</p></div></details>
+<details class="card faq"><summary>Is my data sent anywhere?</summary><div><p>No. Your data stays on your device. See the Privacy Policy above for details, including how Apple Health works.</p></div></details>
+<details class="card faq"><summary>How do I connect or disconnect Apple Health?</summary><div><p>Open the Health app, tap your profile picture, choose Apps, then Sip, and turn the data types on or off. You can also manage this in iOS Settings → Health → Data Access &amp; Devices.</p></div></details>
+<details class="card faq"><summary>How does Apple Watch sync work?</summary><div><p>Data syncs between iPhone and Apple Watch automatically. If something looks out of date, open Sip on both devices and keep them close to each other for a moment.</p></div></details>
+<details class="card faq"><summary>How do I add a widget or a watch face complication?</summary><div><p>On iPhone, touch and hold the Home Screen, tap the “+” button and choose Sip. On Apple Watch, touch and hold the watch face, tap Edit, and pick Sip in a complication slot.</p></div></details>
+<details class="card faq"><summary>I added a drink by mistake. Can I undo it?</summary><div><p>Yes, use the undo action in the app right after adding a drink.</p></div></details>
+<details class="card faq"><summary>Reminders are not arriving</summary><div><p>Check that notifications are allowed for Sip in iOS Settings → Notifications, and that no Focus mode is silencing them.</p></div></details>
+<details class="card faq"><summary>Which iOS version do I need?</summary><div><p>Sip requires iOS 17.2 or later.</p></div></details>
+<details class="card faq"><summary>How do I delete my data?</summary><div><p>Delete the app to remove its data from your device. Data written to Apple Health can be removed in the Health app.</p></div></details>
+<details class="card faq"><summary>Sip is not working properly</summary><div><p>Try closing and reopening the app, restarting your device and installing the latest version. If the issue persists, write to <a href="mailto:egrybin46@gmail.com">egrybin46@gmail.com</a>.</p></div></details>
+</div>
+<div class="lang" data-l="ru">
+  <nav class="chips"><a href="#support-ru">Поддержка</a><a href="#privacy-ru">Конфиденциальность</a><a href="#terms-ru">Условия</a><a href="#faq-ru">Вопросы</a></nav>
+  <section class="card" id="support-ru"><h2>Поддержка</h2><p>Вопросы, сообщения об ошибках или идеи для Sip? Напишите нам, обычно мы отвечаем в течение 24–48 часов.</p>
+    <p class="mail"><span>Почта</span><a href="mailto:egrybin46@gmail.com">egrybin46@gmail.com</a></p></section>
+  <h2 class="pp" id="privacy-ru">Политика конфиденциальности</h2>
+  <p class="upd">Последнее обновление: 15.10.2026</p>
+  <p class="summary"><strong>Коротко:</strong> Sip не собирает, не продаёт и не передаёт ваши персональные данные. Всё, что вы вводите, остаётся на вашем устройстве и, если вы разрешите, в «Здоровье».</p>
+  <section class="card"><h3>Данные на вашем устройстве</h3><p>Для работы Sip хранит локально на iPhone и Apple Watch:</p><ul><li>журнал выпитой воды и ежедневную статистику;</li><li>вашу дневную цель и настройки приложения;</li><li>информацию, которую вы вводите при первом запуске для расчёта цели, например вес.</li></ul><p>Эти данные хранятся в системном хранилище устройства и не отправляются на наши серверы. У нас нет к ним доступа.</p></section>
+<section class="card"><h3>Приложение «Здоровье»</h3><p>Sip интегрируется с приложением «Здоровье» (Apple Health). Доступ необязателен и запрашивается только через стандартное окно разрешений Apple. Если вы разрешите, Sip сможет читать из «Здоровья» и записывать в него те типы данных, которые вы явно разрешили, например количество выпитой воды.</p><ul><li>данные «Здоровья» используются только для работы функций Sip;</li><li>они не используются для рекламы, маркетинга или анализа данных и никогда не продаются и не передаются третьим лицам;</li><li>они не отправляются на наши серверы и не хранятся на них.</li></ul><p>Изменить или отозвать доступ можно в любой момент в приложении «Здоровье» (фото профиля → Приложения → Sip) или в Настройки iOS → Здоровье → Доступ к данным и устройства.</p></section>
+<section class="card"><h3>iPhone, Apple Watch и виджеты</h3><p>Данные синхронизируются между iPhone и Apple Watch напрямую средствами системы и передаются виджетам и компликациям на том же устройстве. Они не проходят через наши серверы.</p></section>
+<section class="card"><h3>Уведомления</h3><p>Напоминания создаются локально на устройстве. Вы можете отключить их в любой момент в приложении или в настройках iOS.</p></section>
+<section class="card"><h3>Оценки</h3><p>Sip может изредка предлагать оценить приложение через стандартное системное окно Apple. Ваш ответ обрабатывает Apple, мы не получаем из него персональных данных.</p></section>
+<section class="card"><h3>Третьи стороны</h3><p>В Sip нет рекламы, аналитики и средств отслеживания, и мы не передаём данные третьим лицам. Если в настройках iOS вы разрешили делиться аналитикой с разработчиками, Apple может предоставлять нам обезличенную статистику. Это контролирует Apple, и она не позволяет вас идентифицировать.</p></section>
+<section class="card"><h3>Хранение и удаление</h3><p>Ваши данные остаются на устройстве, пока вы их не удалите. При удалении приложения его данные удаляются с устройства. Данные, записанные в «Здоровье», остаются там, пока вы не удалите их в приложении «Здоровье». Если вы используете резервное копирование iCloud, копия данных приложения может попасть в резервную копию. Ею управляет Apple и ваши настройки iCloud.</p></section>
+<section class="card"><h3>Конфиденциальность детей</h3><p>Sip сознательно не собирает персональные данные ни у кого, в том числе у детей.</p></section>
+<section class="card"><h3>Изменения политики</h3><p>Мы можем время от времени обновлять эту политику. Актуальная версия всегда доступна на этой странице, дата последнего обновления указана выше.</p></section>
+<section class="card"><h3>Связаться с нами</h3><p>Если у вас есть вопросы по этой политике, напишите на <a href="mailto:egrybin46@gmail.com">egrybin46@gmail.com</a>.</p></section>
+  <h2 class="pp" id="terms-ru">Условия использования</h2>
+  <p class="upd">Последнее обновление: 15.10.2026</p>
+  <section class="card"><h3>Использование приложения</h3><p>Sip предоставляется для вашего личного некоммерческого использования. Нельзя использовать его в коммерческих целях или для чего-либо противозаконного. На использование приложения также распространяется Лицензионное соглашение Apple для приобретённых приложений (Standard EULA).</p></section>
+<section class="card"><h3>Не медицинская консультация</h3><p>Sip — это инструмент для учёта воды, а не медицинское устройство. Дневная цель — это общая оценка на основе введённых вами данных, а не медицинская рекомендация. По вопросам здоровья, питания и питьевого режима обращайтесь к квалифицированному специалисту.</p></section>
+<section class="card"><h3>Интеллектуальная собственность</h3><p>Всё содержимое приложения, включая дизайн, графику, анимации, код и механики, является интеллектуальной собственностью разработчика.</p></section>
+<section class="card"><h3>Ограничение ответственности</h3><p>Приложение предоставляется «как есть», без каких-либо гарантий. Мы не несём ответственности за проблемы с устройством или данными, возникшие при использовании приложения.</p></section>
+<section class="card"><h3>Поведение пользователя</h3><p>Вы соглашаетесь не совершать действий, которые могут повредить приложение, отключить его или нарушить его работу.</p></section>
+<section class="card"><h3>Изменения условий</h3><p>Мы можем изменять эти условия в любое время. Продолжая пользоваться приложением, вы принимаете обновлённые условия.</p></section>
+  <h2 class="pp" id="faq-ru">Частые вопросы</h2>
+  <details class="card faq"><summary>Что такое Sip?</summary><div><p>Sip — минималистичный трекер воды для iPhone и Apple Watch. Отметьте глоток за секунду и следите за прогрессом в течение дня.</p></div></details>
+<details class="card faq"><summary>Как считается дневная цель?</summary><div><p>При первом запуске Sip спрашивает ваш вес и по нему рассчитывает рекомендуемую дневную норму воды. Это общая оценка, а не медицинская рекомендация.</p></div></details>
+<details class="card faq"><summary>Нужен ли интернет?</summary><div><p>Нет. Данные хранятся на вашем устройстве, поэтому Sip полностью работает офлайн.</p></div></details>
+<details class="card faq"><summary>Отправляются ли мои данные куда-либо?</summary><div><p>Нет. Ваши данные остаются на устройстве. Подробности, в том числе про работу со «Здоровьем», смотрите в политике конфиденциальности выше.</p></div></details>
+<details class="card faq"><summary>Как подключить или отключить «Здоровье»?</summary><div><p>Откройте приложение «Здоровье», нажмите на фото профиля, выберите «Приложения», затем Sip, и включите или выключите нужные типы данных. Это также можно сделать в Настройки iOS → Здоровье → Доступ к данным и устройства.</p></div></details>
+<details class="card faq"><summary>Как работает синхронизация с Apple Watch?</summary><div><p>Данные синхронизируются между iPhone и Apple Watch автоматически. Если что-то выглядит устаревшим, откройте Sip на обоих устройствах и подержите их рядом.</p></div></details>
+<details class="card faq"><summary>Как добавить виджет или компликацию на циферблат?</summary><div><p>На iPhone нажмите и удерживайте экран «Домой», нажмите «+» и выберите Sip. На Apple Watch нажмите и удерживайте циферблат, выберите «Изменить» и поставьте Sip в слот компликации.</p></div></details>
+<details class="card faq"><summary>Я случайно добавил глоток. Можно отменить?</summary><div><p>Да, воспользуйтесь действием отмены в приложении сразу после добавления.</p></div></details>
+<details class="card faq"><summary>Не приходят напоминания</summary><div><p>Проверьте, что уведомления для Sip разрешены в Настройки iOS → Уведомления и что их не блокирует режим фокусировки.</p></div></details>
+<details class="card faq"><summary>Какая версия iOS нужна?</summary><div><p>Для Sip нужна iOS 17.2 или новее.</p></div></details>
+<details class="card faq"><summary>Как удалить мои данные?</summary><div><p>Удалите приложение, и его данные пропадут с устройства. Данные, записанные в «Здоровье», можно удалить в приложении «Здоровье».</p></div></details>
+<details class="card faq"><summary>Sip работает неправильно</summary><div><p>Попробуйте закрыть и снова открыть приложение, перезагрузить устройство и установить последнюю версию. Если проблема остаётся, напишите на <a href="mailto:egrybin46@gmail.com">egrybin46@gmail.com</a>.</p></div></details>
+</div>
+<footer>© 2026 Sip</footer>
+</main>
+<script>
+(function () {
+  var root = document.documentElement, KEY = "sip-lang";
+  function apply(l) {
+    root.setAttribute("data-lang", l); root.lang = l;
+    document.querySelectorAll(".tag[data-t]").forEach(function (el) { el.hidden = el.getAttribute("data-t") !== l; });
+    document.title = l === "ru" ? "Sip — Поддержка и политика конфиденциальности" : "Sip — Support & Privacy Policy";
+  }
+  var saved = null; try { saved = localStorage.getItem(KEY); } catch (e) {}
+  apply(saved || ((navigator.language || "").toLowerCase().indexOf("ru") === 0 ? "ru" : "en"));
+  document.querySelectorAll(".switch button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var l = b.getAttribute("data-set"); apply(l);
+      try { localStorage.setItem(KEY, l); } catch (e) {}
+    });
+  });
+})();
+</script>
+</body>
+</html>
